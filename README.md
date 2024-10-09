@@ -12,9 +12,9 @@
 
 To install the TeamSpeak server on your machine, simply run the following command in your terminal:
 
-\`\`\`bash
+```bash
 bash <(curl -s https://raw.githubusercontent.com/lowdigital/teamspeak3installer/main/ts3installer.sh)
-\`\`\`
+```
 
 ## Features
 
@@ -34,17 +34,17 @@ bash <(curl -s https://raw.githubusercontent.com/lowdigital/teamspeak3installer/
 
 Before starting, make sure you have the necessary tools to download and run the script:
 
-\`\`\`bash
-apt update && apt install -y curl wget sudo
-\`\`\`
+```bash
+apt update && apt install -y curl wget
+```
 
 ### Step 2: Install TeamSpeak using a single command
 
 To install TeamSpeak with a single command, run the following:
 
-\`\`\`bash
+```bash
 bash <(curl -s https://raw.githubusercontent.com/lowdigital/teamspeak3installer/main/ts3installer.sh)
-\`\`\`
+```
 
 ### Step 3: Connect to the server
 
@@ -59,66 +59,66 @@ Once installed, the TeamSpeak server will automatically start with the system.
 You can manually control the server with the following commands:
 
 - **Start the server**:
-  \`\`\`bash
-  sudo systemctl start teamspeak
-  \`\`\`
+  ```bash
+  service teamspeak start
+  ```
 
 - **Stop the server**:
-  \`\`\`bash
-  sudo systemctl stop teamspeak
-  \`\`\`
+  ```bash
+  service teamspeak stop
+  ```
 
 - **Restart the server**:
-  \`\`\`bash
-  sudo systemctl restart teamspeak
-  \`\`\`
+  ```bash
+  service teamspeak restart
+  ```
 
 - **Check the server status**:
-  \`\`\`bash
-  sudo systemctl status teamspeak
-  \`\`\`
+  ```bash
+  service teamspeak status
+  ```
 
 ## Logs
 
 TeamSpeak server logs can be found in the following directory:
 
-\`\`\`
+```
 /opt/teamspeak/logs/
-\`\`\`
+```
 
 To view the latest log file with the admin token:
 
-\`\`\`bash
+```bash
 cat /opt/teamspeak/logs/ts3server_*.log
-\`\`\`
+```
 
 ## Updating the TeamSpeak Server
 
 When a new version of TeamSpeak is released, you can manually update the server by following these steps:
 
 1. Stop the current TeamSpeak service:
-   \`\`\`bash
-   sudo systemctl stop teamspeak
-   \`\`\`
+   ```bash
+   service teamspeak stop
+   ```
 
 2. Download and install the latest version, following the instructions in the script or by updating it.
 
 3. Restart the TeamSpeak service:
-   \`\`\`bash
-   sudo systemctl start teamspeak
-   \`\`\`
+   ```bash
+   service teamspeak start
+   ```
 
 ## Uninstalling the TeamSpeak Server
 
 To remove the TeamSpeak server from your system, run the following commands:
 
-\`\`\`bash
-sudo systemctl stop teamspeak
-sudo systemctl disable teamspeak
-sudo rm -rf /opt/teamspeak
-sudo rm /etc/systemd/system/teamspeak.service
-sudo systemctl daemon-reload
-\`\`\`
+```bash
+service teamspeak stop
+systemctl disable teamspeak
+rm -rf /opt/teamspeak
+rm /etc/systemd/system/teamspeak.service
+systemctl daemon-reload
+```
 
 ## License
 
