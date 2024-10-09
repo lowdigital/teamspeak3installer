@@ -25,7 +25,7 @@ bash <(curl -s https://raw.githubusercontent.com/lowdigital/teamspeak3installer/
 ## Requirements
 
 - A Linux server with SSH access (e.g., VPS or Dedicated server).
-- Operating system: Debian 12 (or a compatible version).
+- Operating system: Any recent Linux distribution, 32 and 64-bit (e.g. Debian 12)
 - Root privileges are required for installation and configuration.
 
 ## Installation
