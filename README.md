@@ -35,7 +35,7 @@ bash <(curl -s https://raw.githubusercontent.com/lowdigital/teamspeak3installer/
 Before starting, make sure you have the necessary tools to download and run the script:
 
 ```bash
-apt update && apt install -y curl wget
+apt update && apt install -y curl wget bzip2
 ```
 
 ### Step 2: Install TeamSpeak using a single command
